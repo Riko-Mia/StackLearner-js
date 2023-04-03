@@ -1,0 +1,9 @@
+// lexical scope in javascript 
+
+
+
+
+
+
+
+
