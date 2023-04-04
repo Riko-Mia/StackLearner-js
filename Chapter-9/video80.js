@@ -37,7 +37,3 @@ function sumOfArr(arr, lastIndex){
 
 console.log(sumOfArr(arr, arr.length - 1))
 
-
-
-
-

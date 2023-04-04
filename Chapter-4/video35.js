@@ -6,7 +6,10 @@ for(; ;){
 if(rand === 9){
     console.log('You are winner.')
     break
-}else{
+}else if(rand === 7 && rand === 4){
+    continue
+    
+} else{
     console.log(`You have got ${rand}`)
 }
 }

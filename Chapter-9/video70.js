@@ -18,7 +18,3 @@ function manipulate(a,b,func){
 var multiply = manipulate(3,4,add)
 console.log(multiply())
 
-
-
-
-

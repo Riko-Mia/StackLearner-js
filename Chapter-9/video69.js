@@ -25,12 +25,3 @@ setTimeout(function(){
     console.log('I have created...')
 },100)
 
-
-
-
-
-
-
-
-
-

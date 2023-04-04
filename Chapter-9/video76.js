@@ -31,11 +31,3 @@ console.log(myReduce(arr, function(prev, curr){
     return Math.min(prev, curr)
 },arr[0]))
 
-
-
-
-
-
-
-
-

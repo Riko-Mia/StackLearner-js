@@ -14,9 +14,3 @@ for(var i in point){
 }
 
 console.log(sum)
-
-
-
-
-
-

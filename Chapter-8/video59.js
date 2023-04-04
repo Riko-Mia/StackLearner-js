@@ -15,7 +15,7 @@ function sub() {
     console.log(a-b)
 }
 
-
+sub(), add()
 
 
 

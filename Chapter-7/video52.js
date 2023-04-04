@@ -12,9 +12,3 @@ console.log(point['z'])
 
 var show = 'z'
 console.log(point[show])
-
-
-
-
-
-
