@@ -16,6 +16,3 @@ function currying(a){
 
 console.log(currying(5)(10)(15))
 
-
-
-

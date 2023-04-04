@@ -20,12 +20,3 @@ function sumOfArr(arr){
 sumOfArr(arr1)
 sumOfArr(arr2)
 sumOfArr([50,80])
-
-
-
-
-
-
-
-
-

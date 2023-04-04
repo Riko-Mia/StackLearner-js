@@ -15,8 +15,8 @@ function x(){
         var a = 10 
         console.log(a)
     }
-    y()
     console.log(a)
+    y()
 }
 x()
 
@@ -37,10 +37,3 @@ function test(n){
     }
 }
 test(30)
-
-
-
-
-
-
-

@@ -8,9 +8,3 @@ var b = 'bcd'
 // console.log('a' > 'Z')  // Result -- true
 
 console.log('002' == 2)
-
-
-
-
-
-

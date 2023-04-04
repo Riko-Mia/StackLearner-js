@@ -21,14 +21,3 @@ console.log(obj2)
 var obj3 = new Object()
 obj3.b = 20
 console.log(obj3)
-
-
-
-
-
-
-
-
-
-
-

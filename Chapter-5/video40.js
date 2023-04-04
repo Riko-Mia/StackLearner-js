@@ -12,12 +12,3 @@ console.log('ABC'.toLowerCase()) // abc
 console.log('     riko    '.trim()) // remove space (riko)
 console.log(c.split(' ')) // ['I', 'am', 'Riko', 'Mia']
 
-
-
-
-
-
-
-
-
-

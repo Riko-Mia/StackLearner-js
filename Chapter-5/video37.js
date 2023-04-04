@@ -1,3 +1,5 @@
+// String literal vs  constructor
+
 var str = 'Riko Ahmed' // That name string literal
 var str2 = String('Riko mia') //That name string constructor 
 
@@ -8,8 +10,3 @@ var n = 10
 var strs = String(n)
 
 console.log(strs)
-
-
-
-
-

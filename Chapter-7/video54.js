@@ -12,6 +12,3 @@ console.log(point)
 // delete point.a
 
 console.log(point)
-
-
-

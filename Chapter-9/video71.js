@@ -9,9 +9,3 @@ function a(){
 var abc = a()
 console.dir(abc)
 
-
-
-
-
-
-

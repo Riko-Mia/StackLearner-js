@@ -15,10 +15,3 @@ point['y'] = 100
 var prop = 'z'
 point[prop] = 45
 console.log(point)
-
-
-
-
-
-
-

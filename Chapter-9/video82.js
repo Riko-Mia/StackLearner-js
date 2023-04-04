@@ -12,8 +12,3 @@ function add(a,b){
     return a + b
 }
 print(multiply(add(3,5)))
-
-
-
-
-
