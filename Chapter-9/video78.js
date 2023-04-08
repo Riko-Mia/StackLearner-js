@@ -6,9 +6,9 @@ var person =[
     {name: "D", age: 21}
 ]
 
-var arr = [4,8,-2,3,7,6,9,8,7,4,8,6,5,9]
-// arr.sort()
-// console.log(arr)
+var arr = [4,8,2,3,7,6,9,8,7,4,8,6,5,9]
+arr.sort()
+console.log(arr)
 
 // person.sort()
 // console.log(person)
@@ -55,3 +55,16 @@ console.log(arr.some(function(value){
 console.log(arr.some(function(value){
     return value < 0
 }))
+
+
+person.sort(function(a,b){
+    if(a.name > b.name){
+        return -1
+    } else if(a.name < b.name){
+        return 1
+    } else{
+        return 0
+    }
+})
+console.log(person)
+

@@ -1,15 +1,15 @@
 // reduce function in javascript 
-var arr = [1,-2,3,4,5]
+var arr = [1,2,3,4,5]
 
-// var sum = arr.reduce(function(prev, curr){
-//     return prev + curr
-// },100)
-// var max = arr.reduce(function(prev, curr){
-//     return Math.max(prev, curr)
-// },0)
+var sum = arr.reduce(function(prev, curr){
+    return prev + curr
+},100)
+var max = arr.reduce(function(prev, curr){
+    return Math.max(prev, curr)
+},0)
 
-// console.log(max)
-// console.log(sum)
+console.log(max)
+console.log(sum)
 
 
 function myReduce(arr, cb, acc){

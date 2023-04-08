@@ -10,7 +10,7 @@ Shape.prototype = {
 }
 
 
-function Square(width){
+function Square(width){        // Base function Constructor
     this.width= width
 }
 
@@ -24,10 +24,10 @@ var shape = new Shape()
 var sqr = new Square(45)
 
 
-// shape -> shape -> object
-// sqr - > shape -> object
+// shape -> Shape -> object
+// sqr - > Shape -> object
 
-// sqr -> square -> shape -> object
+// sqr -> Square -> Shape -> object
 function Circle(){
 
 }
@@ -275,7 +275,7 @@ for(var i of shapes){
 
 // video 135
 // When to use inheritance in javascript
-/** */
+/**
 function extend(Parent, Child){
     Child.prototype = Object.create(Parent.prototype)
     Child.prototype.constructor = Child
@@ -321,11 +321,57 @@ var s = new Shape('Pirple')
 var shapes = [s,c,sqr]
 for(var i of shapes){
     // i.common()
+} 
+*/
+
+
+
+
+
+
+
+
+// video 135
+// Inheritance &Composition Mixing in javascript
+
+function mixing(target, ...sources){
+    Object.assign(target, ...sources)
 }
 
+var canWalk = {
+    walk: function(){
+        console.log('Walking...')
+    }
+}
+var canSwim = {
+    swim: function(){
+        console.log('Swimming....')
+    }
+}
 
+var canEat = {
+    eat: function(){
+        console.log('Eating...')
+    }
+}
+// var person = Object.assign({}, canWalk, canEat)
+// person.name = 'Riko mia'
 
+function Person(name){
+    this.name = name
+}
+// Object.assign(Person.prototype, canWalk, canEat)
+mixing(Person.prototype, canWalk,canEat)
+var person = new Person('riko mia')
 
+console.log(person)
+
+function GoldFish(name){
+    this.name = name
+}
+mixing(GoldFish.prototype,canEat, canSwim)
+var fish = new GoldFish('bla bla bla')
+console.log(fish)
 
 
 

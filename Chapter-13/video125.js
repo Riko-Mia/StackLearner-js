@@ -20,8 +20,8 @@ Square.prototype = {
 
 var sqr1 = new Square(10)
 var sqr2 = new Square(5)
-// sqr1.draw()
-// sqr2.draw()
+sqr1.draw()
+sqr2.draw()
 
 
 

@@ -18,7 +18,7 @@ var Rect = new Function('width', 'height', `this.width = width
         console.log('My height is '+ this.height)
     }`)
 
-var rect5 = new Rect(5,8)
+// var rect5 = new Rect(5,8)
 // console.log(rect5)
 // rect5.draw()
 // console.log(test.name, test.length)

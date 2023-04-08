@@ -9,8 +9,8 @@ Person.prototype.PI = 3.456
 var p1 = new Person('Riko Mia')
 var p2 = new Person('Riko')
 
-// console.log(Object.getPrototypeOf(p1))
-// console.log(Person.prototype)
+console.log(Object.getPrototypeOf(p1))
+console.log(Person.prototype)
 console.log(p1)
 console.log(p2)
 
