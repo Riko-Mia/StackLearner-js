@@ -12,7 +12,8 @@
 
 // video 141
 // Arrow function syntax in javascript 
-/** let add = (a,b) => a*b 
+/** 
+let add = (a,b) => a*b 
 console.log(add(10,2))
 
 let sqr = x => x * x
@@ -217,7 +218,7 @@ console.log(first,last) */
 
 // video 148
 // object form entries in javascript 
-/** 
+ /** 
 let obj = {
     a:10,
     b:20
@@ -229,7 +230,8 @@ var objArr= [
     ['c', 32]
 ]
 console.log(Object.fromEntries(objArr))
-// console.log(objArr) */
+// console.log(objArr) 
+*/
 
 
 
@@ -240,7 +242,7 @@ console.log(Object.fromEntries(objArr))
 
 // video 149
 // Symbols in javascript 
-/** 
+// /** 
 let s1= Symbol()
 let s2= Symbol('test symbol')
 
@@ -254,7 +256,7 @@ let toss= {
 }
 // A name 
 // Name callition
- */
+//  */
 
 
 

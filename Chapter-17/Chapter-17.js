@@ -32,7 +32,8 @@ function sayName(name){
     return result
 }
 let output = sayName('Riko mia')
-console.log(output) */
+console.log(output) 
+*/
 
 
 
@@ -100,6 +101,7 @@ getRequest('https://jsonplaceholder.typicode.com/users', (err, res) =>{
         console.log(err)
     } else{
         console.log(res)
+        res.forEach((r) => console.log(r.name,r.username, r.id, r.email, r.website))
     }
 })
 
@@ -110,7 +112,8 @@ getRequest('https://jsonplaceholder.typicode.com/posts', (err, res) =>{
     } else{
         res.forEach (r => console.log(r.title))
     }
-}) */
+}) 
+*/
 
 
 
@@ -133,9 +136,11 @@ function asyncMap(arr, cb){
     })
 }
 let qbArr = asyncMap(arr, v => {
-    console.log(v)
+    console.log(v*v*v)
 })
-console.log(qbArr)*/
+
+console.log(qbArr)
+*/
 
 
 
@@ -164,13 +169,13 @@ function getRequest(url, callback){
 }
 
 
-const baseUrl ='https://jsonplaceholder.typicode.com/'
-getRequest(`${baseUrl}/1`,(err, res) =>{
+const baseUrl ='https://jsonplaceholder.typicode.com'
+getRequest(`${baseUrl}/posts/1`,(err, res) =>{
     if(err){
         throw new Error('Error occurred 1')
     }
     
-    let { userId} = res
+    let {userId} = res
 
     getRequest(`${baseUrl}/users/${userId}`, (err, res) =>{
         if(err){
@@ -183,7 +188,7 @@ getRequest(`${baseUrl}/1`,(err, res) =>{
         })
     })
 })
- */
+*/
 
 
 
@@ -203,15 +208,15 @@ let p2 = new Promise((resolve, reject) => {
 
 // console.log(p1)
 // console.log(p2)
-p1.then((v) => {
-    console.log(v)
-}).catch((e) =>{
-    console.log(e)
-})
+// p1.then((v) => {
+//     console.log(v)
+// }).catch((e) =>{
+//     console.log(e)
+// })
 
-p2.then((v) => {
-    console.log(v)
-})
+// p2.then((v) => {
+//     console.log(v)
+// })
 function getIphone(isPassed){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -224,7 +229,7 @@ function getIphone(isPassed){
     })
 }
 
-getIphone(false)
+getIphone(true)
     .then((res) => {
         console.log(res)
     })
@@ -232,7 +237,8 @@ getIphone(false)
         console.log(e)
     })
 
-// console.log(getIphone(false)) */
+// console.log(getIphone(false)) 
+*/
 
 
  
@@ -245,18 +251,46 @@ getIphone(false)
 /**
 const baseUrl ='https://jsonplaceholder.typicode.com'
 
-fetch(`${baseUrl}/users/1`)
-    .then(res => res.json())
+// fetch(`${baseUrl}/users/5`)
+//     .then(res => res.json())
+//     .then(data => {
+//         console.log(data.name)
+//         return Promise.resolve('Something')
+//     })
+//     .then(str => {
+//         console.log(str)
+//         return Promise.resolve('Another Promise')
+//     })
+//     .then(another => {
+//         console.log(another)
+//     })
+//     .catch(e => {
+//         console.log(e)
+//     })
+
+
+
+    function getRequest(url){
+        return new Promise((resolve, reject)=> {
+            const xhr = new XMLHttpRequest()
+            xhr.open('get', url)
+        
+            xhr.onreadystatechange = function(e){
+                if(xhr.readyState === 4){
+                    if(xhr.status === 200){
+                        let response = JSON.parse(xhr.response)
+                        resolve(response)
+                    } else {
+                        reject(new Error ('Occurred'))
+                    }
+                }
+            }
+            xhr.send()
+        })
+    }
+getRequest(`${baseUrl}/users/1`)
     .then(data => {
         console.log(data)
-        return Promise.resolve('Something')
-    })
-    .then(str => {
-        console.log(str)
-        return Promise.resolve('Another Promise')
-    })
-    .then(another => {
-        console.log(another)
     })
     .catch(e => {
         console.log(e)
@@ -273,7 +307,7 @@ fetch(`${baseUrl}/users/1`)
 // Promise API in javascript
 /**
 
-// const delay = s => new Promise(resolve => setTimeout(resolve, s * 1000))
+// const delay = s => new Promise((resolve,reject) => setTimeout(resolve, s * 1000))
 
 // delay(2).then(() => console.log('2 seconds delay'))
 // delay(1).then(() => console.log('1 seconds delay'))
@@ -332,7 +366,7 @@ Promise.race(promiseArr)
 // console.log(myPromise())
 
 // async function test(){
-
+// return 'test'
 // }
 // test().then(v => alert(v))
 
@@ -349,24 +383,25 @@ Promise.race(promiseArr)
 // }
 // myAsyncFunc()
 
-// async function fetchData(){
-//     let res = await fetch('https://jsonplaceholder.typicode.com/users')
+async function fetchData(){
+    let res = await fetch('https://jsonplaceholder.typicode.com/users')
 
-//     let data = await res.json()
-//     let names = data.map(u => u.name)
-//     let address = data.map(a => a.id)
-//     console.log(names + '-'+ address)
+    let data = await res.json()
+    let names = data.map(u => u.name)
+    let address = data.map(a => a.id)
+    console.log(names + '-'+ address)
     
-// }
+}
 
-// fetchData()
+fetchData()
 let promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]
 
 async function promiseAll(){
     let result = await Promise.all(promises)
     console.log(result)
 }
-promiseAll() */
+promiseAll() 
+*/
 
 
  
@@ -376,7 +411,7 @@ promiseAll() */
 
 // video 191
 // Async Iterator in javascript
-/**
+ /**
 let asyncIterable = {
     [Symbol.asyncIterator](){
         let i = 0;
@@ -412,7 +447,7 @@ let iterate = asyncIterable[Symbol.asyncIterator]();
     console.log(await iterate.next())
 })()
 // console.log(iterate)
- */
+*/
 
 
  
@@ -461,7 +496,8 @@ let iterators = asyncIterable[Symbol.asyncIterator]();
     for await (let v of asyncIterable){
         console.log(v)
     }
-})() */
+})() 
+*/
 
 
 
@@ -471,7 +507,7 @@ let iterators = asyncIterable[Symbol.asyncIterator]();
 
 // video 193
 // async generators in javascript
-/**
+///**
 async function * myAsyncGenerator (){
     let i = 0
     while (true){
@@ -483,7 +519,8 @@ async function * myAsyncGenerator (){
     for await (let v of myAsyncGenerator()){
         console.log(v)
     }
-})() */
+})() 
+//*/
 
 
 

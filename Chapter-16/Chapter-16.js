@@ -7,7 +7,8 @@
 let n = 10
 if(n > 5){
     throw new Error(`${n} is Greater than 5`)
-} */
+} 
+*/
 
 
 
@@ -20,14 +21,18 @@ if(n > 5){
 let n = Number.parseInt('4')
 // console.log(n)
 function changeToInt(v){
+    // if (typeof v === 'object'){
+    //     return 'Please provide a value which is able to convert is Integer &  this is Object'
+    // }
     let result = Number.parseInt(v)
     if(!result){
         return 'Please provide a value which is able to convert is Integer'
-    }
+    } 
     return result
 }
-let result = changeToInt('34.54')
-console.log(result) */
+let result = changeToInt(1)
+console.log(result) 
+*/
 
 
 
@@ -53,7 +58,8 @@ function makeWords(text){
     // return words
 }
 let words = makeWords(86)
-console.log(words) */
+console.log(words) 
+*/
 
 
 
@@ -117,7 +123,7 @@ try{
 
 // video 175
 // Optional catch binding in javascript
-/** */
+// /**
 class CustomError extends Error{
     constructor(msg){
         super(msg)
@@ -139,7 +145,7 @@ try{
 } finally{
     console.log('I am Finally Block')
 } 
-
+//  */
 
 
 
